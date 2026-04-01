@@ -1,4 +1,4 @@
-````md
+
 # 🚆 Train Tracker Telegram Bot
 
 Un piccolo progetto nato da una cosa semplice:  
@@ -117,7 +117,4 @@ Questo progetto:
 ## 👤 Autore
 
 Progetto nato da necessità reale, non da teoria.
-
 Se sei pendolare, capisci.
-
-```
