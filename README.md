@@ -1,120 +1,55 @@
-
 # 🚆 Train Tracker Telegram Bot
 
-Un piccolo progetto nato da una cosa semplice:  
-sono spesso in treno, e volevo qualcosa che mi dicesse al volo se era in ritardo oppure no, senza aprire mille app.
+Un bot Telegram leggero per monitorare in tempo reale i ritardi dei treni tramite le API (non ufficiali) di Trenitalia. 
+Nato da un'esigenza pratica: avere lo stato del proprio treno al volo, senza pubblicità e senza aprire app pesanti.
 
-Così ho fatto questo bot.
+## 💡 Funzionalità
 
----
+- **Monitoraggio continuo:** Controlla lo stato di uno o più treni in background.
+- **Dati in tempo reale:** Recupera le informazioni di viaggio direttamente dai server Trenitalia.
+- **Notifiche dirette:** Invia aggiornamenti automatici su Telegram con tratta, stato e minuti di ritardo.
+- **Zero overhead:** Script essenziale in Python, veloce e senza dipendenze inutili.
 
-## 💡 Cosa fa
+## ⚙️ Requisiti
 
-- Monitora uno o più treni
-- Recupera dati da Trenitalia (API pubbliche)
-- Invia aggiornamenti su Telegram
-- Mostra ritardo e stato del treno
+- Python 3.x
+- Un bot Telegram (creato tramite [@BotFather](https://t.me/BotFather)) e il relativo `TOKEN`.
+- Il tuo `CHAT_ID` di Telegram.
 
----
+## 🚀 Installazione e Avvio
 
-## 🧠 Perché esiste
+1. **Clona la repository**
+   ```bash
+   git clone [https://github.com/tuo-username/train-tracker-bot.git](https://github.com/tuo-username/train-tracker-bot.git)
+   cd train-tracker-bot
+   ```
 
-Sono pendolare.
+2. **Installa le dipendenze**
+   ```bash
+   pip install requests
+   ```
 
-Ogni giorno:
-- controlli orari
-- ritardi
-- cambi improvvisi
+3. **Configurazione**
+   Apri il file principale dello script e compila la sezione di configurazione con i tuoi dati:
+   ```python
+   TOKEN = "IL_TUO_TOKEN"
+   CHAT_ID = "IL_TUO_CHAT_ID"
+   TRENI = ["1234", "5678"] # Inserisci i numeri dei treni che ti interessano
+   ```
 
-Dopo un po’ ti stufi.
+4. **Esecuzione**
+   Avvia il processo. Se lo fai girare su un server linux, valuta l'uso di `screen` o `systemd` per mantenerlo attivo in background.
+   ```bash
+   python main.py
+   ```
 
-Volevo qualcosa di:
-- veloce
-- diretto
-- senza pubblicità
-- senza aprire app pesanti
+## 🧩 Roadmap & Sviluppi Futuri
 
-Quindi ho scritto questo.
+- Invio notifiche *solo* se il ritardo o lo stato cambiano (riduzione dello spam).
+- Gestione sicura delle credenziali tramite variabili d'ambiente (`.env`).
+- Supporto multi-utente tramite comandi Telegram (es. `/track 1234`).
+- Implementazione della cache per ottimizzare le richieste HTTP.
 
----
+## ⚠️ Disclaimer
 
-## ⚙️ Come funziona
-
-- Python
-- API non ufficiali Trenitalia
-- Telegram Bot API
-
-Loop semplice:
-1. prende i dati
-2. li elabora
-3. li manda su Telegram
-
----
-
-## 🚀 Setup veloce
-
-1. Clona repo
-
-```bash
-git clone https://github.com/tuo-username/train-tracker-bot
-cd train-tracker-bot
-````
-
-2. Installa dipendenze
-
-```bash
-pip install requests
-```
-
-3. Configura
-
-Apri il file `.py` e inserisci:
-
-```python
-TOKEN = "IL_TUO_TOKEN"
-CHAT_ID = "IL_TUO_CHAT_ID"
-TRENI = ["1234", "5678"]
-```
-
-4. Avvia
-
-```bash
-python main.py
-```
-
----
-
-## 🔎 SEO / Keywords
-
-train tracker python
-trenitalia api python
-telegram bot treni
-monitor treni ritardo
-train delay bot
-python train tracker
-
----
-
-## ⚠️ Nota
-
-Questo progetto:
-
-* NON usa API ufficiali documentate
-* è fatto per uso personale / studio
-* potrebbe smettere di funzionare se Trenitalia cambia qualcosa
-
----
-
-## 🧩 Idee future
-
-* notifiche solo se cambia stato
-* interfaccia web
-* supporto multi utente
-* grafica migliore
-
----
-
-## 👤 Autore
-
-Progetto nato da necessità reale, non da teoria.
-Se sei pendolare, capisci.
+Questo progetto utilizza endpoint non ufficiali di Trenitalia. È pensato per automazione personale e a scopo di studio. Le API potrebbero cambiare struttura in qualsiasi momento senza preavviso, interrompendo il funzionamento del bot.
