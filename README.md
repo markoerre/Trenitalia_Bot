@@ -22,7 +22,7 @@ Nato da un'esigenza pratica: avere lo stato del proprio treno al volo, senza pub
 1. **Clona la repository**
    ```bash
    git clone https://github.com/markoerre/Trenitalia_Bot.git
-   cd train-tracker-bot
+   cd Trenitalia_Bot
    ```
 
 2. **Installa le dipendenze**
