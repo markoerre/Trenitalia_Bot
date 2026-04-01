@@ -1,6 +1,7 @@
 # 🚆 Train Tracker Telegram Bot
 
 Un bot Telegram leggero per monitorare in tempo reale i ritardi dei treni tramite le API (non ufficiali) di Trenitalia. 
+
 Nato da un'esigenza pratica: avere lo stato del proprio treno al volo, senza pubblicità e senza aprire app pesanti.
 
 ## 💡 Funzionalità
