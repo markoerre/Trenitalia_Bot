@@ -15,6 +15,7 @@ Nato da un'esigenza pratica: avere lo stato del proprio treno al volo, senza pub
 - Python 3.x
 - Un bot Telegram (creato tramite [@BotFather](https://t.me/BotFather)) e il relativo `TOKEN`.
 - Il tuo `CHAT_ID` di Telegram.
+- **Un server o una macchina sempre accesa** (es. VPS, Raspberry Pi o server locale) per mantenere lo script in esecuzione 24/7.
 
 ## 🚀 Installazione e Avvio
 
